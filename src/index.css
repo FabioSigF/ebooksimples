@@ -24,3 +24,8 @@ h6 {
   @apply text-black-50;
   font-family: "Inter", sans-serif;
 }
+
+input,
+textarea {
+  outline: none;
+}

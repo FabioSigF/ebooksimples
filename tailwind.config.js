@@ -17,6 +17,12 @@ export default {
         "hero": "url('./src/images/herobg.jpeg')",
         "sobre": "url('./src/images/features_bg.png')",
       }),
+      backgroundPosition: {
+        "top-center": "top center"
+      },
+      gridTemplateColumns: {
+        "60-40": "60% 40%"
+      },
       fontFamily: {
         text: ["Lato", "sans-serif"],
         title: ["Inter", "sans-serif"]

@@ -3,6 +3,10 @@ import Navbar from "./scenes/Navbar";
 import { SelectedPage } from "./shared/types";
 import Inicio from "./scenes/Inicio";
 import Sobre from "./scenes/Sobre";
+import Metricas from "./scenes/Metricas";
+import Testemunhos from "./scenes/Testemunhos";
+import Contato from "./scenes/Contato";
+import Footer from "./scenes/Footer";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -13,6 +17,10 @@ const App = () => {
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Inicio setSelectedPage={setSelectedPage}/>
       <Sobre setSelectedPage={setSelectedPage} />
+      <Metricas setSelectedPage={setSelectedPage} />
+      <Testemunhos setSelectedPage={setSelectedPage} />
+      <Contato setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   );
 };
