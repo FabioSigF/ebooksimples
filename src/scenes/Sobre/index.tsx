@@ -37,7 +37,7 @@ const Sobre = ({ setSelectedPage }: Props) => {
       onViewportEnter={() => setSelectedPage(SelectedPage.Sobre)}
       className="bg-sobre bg-no-repeat"
     >
-      <div className="w-5/6 m-auto mt-64 relative pb-32">
+      <div className="w-5/6 m-auto pt-64 relative pb-32">
         <TitleSection
           header="Wordpress"
           title="Display the best features here"
