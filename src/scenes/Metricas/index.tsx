@@ -49,7 +49,7 @@ const Metricas = ({ setSelectedPage }: Props) => {
       id={SelectedPage.Metricas}
       onViewportEnter={() => setSelectedPage(SelectedPage.Metricas)}
     >
-      <div className="w-5/6 m-auto flex justify-between">
+      <div className="w-5/6 m-auto flex flex-col sm:flex-row justify-between">
         {content.map((item, index) => (
           <div
             className="flex flex-col gap-4 items-center justify-center text-white"

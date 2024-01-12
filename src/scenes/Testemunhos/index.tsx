@@ -50,7 +50,7 @@ const Testemunhos = ({ setSelectedPage }: Props) => {
           header="Reviews"
           title="Show some quotes from your readers"
         />
-        <div className=" w-full grid grid-cols-60-40 pt-20">
+        <div className=" w-full grid grid-cols-1 md:grid-cols-60-40 pt-20">
           <img
             src={TestemunhosBg}
             alt="testemunhos"
@@ -59,7 +59,7 @@ const Testemunhos = ({ setSelectedPage }: Props) => {
           <div className="relative py-16 flex flex-col gap-8 w-full items-end">
             {testemunhos.map((item, index) => (
               <div
-                className="bg-white p-12 rounded-md shadow-xl w-[100% + 100px] -ml-[100px]"
+                className="bg-white p-12 rounded-md shadow-xl md:w-[100% + 100px] md:-ml-[100px]"
                 key={index}
               >
                 <p className="text-xl">{item.text}</p>

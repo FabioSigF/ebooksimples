@@ -27,7 +27,7 @@ const Inicio = ({ setSelectedPage }: Props) => {
           <img
             src={HeroBook}
             alt="Book title"
-            className="w-[65%] m-auto -mb-[150px]"
+            className="w-[65%] m-auto -mb-[100px] sm:-mb-[150px]"
           />
         </div>
       </div>

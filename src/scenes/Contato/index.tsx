@@ -13,8 +13,8 @@ const Contato = ({ setSelectedPage }: Props) => {
       onViewportEnter={() => setSelectedPage(SelectedPage.Contato)}
       className="bg-primary-100 py-32 w-full"
     >
-      <div className="w-5/6 m-auto grid grid-cols-2 gap-16 items-center">
-        <form className="flex flex-col gap-4">
+      <div className="w-5/6 m-auto flex flex-col-reverse md:flex-row gap-16 items-center">
+        <form className="flex flex-col gap-4 md:w-1/2">
           <input
             type="text"
             placeholder="Name"
@@ -33,11 +33,11 @@ const Contato = ({ setSelectedPage }: Props) => {
             Subscribe & Download
           </button>
         </form>
-        <div className="flex flex-col gap-8">
+        <div className="flex items-center flex-col gap-8 md:items-start md:w-1/2">
           <div className="text-white text-6xl">
             <FaMailBulk />
           </div>
-          <h3 className="text-white font-bold text-6xl">
+          <h3 className="text-white font-bold text-4xl text-center md:text-start md:text-6xl">
             Let's subscribe to download the free ebook
           </h3>
           <p className="text-gray-200 text-[18px]">

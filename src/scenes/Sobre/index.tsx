@@ -42,7 +42,7 @@ const Sobre = ({ setSelectedPage }: Props) => {
           header="Wordpress"
           title="Display the best features here"
         />
-        <div className="mt-16 grid grid-cols-3 gap-8 items-start">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
           {content.map((item, index) => (
             <CardSobre
               key={index}
