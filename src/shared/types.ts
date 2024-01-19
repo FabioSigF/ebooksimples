@@ -13,3 +13,9 @@ export interface CardSobreInterface {
   title: string,
   description: string
 }
+
+export type ContatoForm = {
+  nome: string;
+  email: string;
+  texto: string;
+} 

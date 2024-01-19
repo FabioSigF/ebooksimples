@@ -57,17 +57,17 @@ const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
               <ul className={`${flexBetween} gap-8`}>
                 <li>
                   <a href="#!">
-                    <FaFacebookSquare className="text-xl text-white" />
+                    <FaFacebookSquare className="text-xl text-white transition hover:text-primary-200"/>
                   </a>
                 </li>
                 <li>
                   <a href="#!">
-                    <FaTwitter className="text-xl text-white" />
+                    <FaTwitter className="text-xl text-white transition hover:text-primary-200"/>
                   </a>
                 </li>
                 <li>
                   <a href="#!">
-                    <FaInstagram className="text-xl text-white" />
+                    <FaInstagram className="text-xl text-white transition hover:text-primary-200"/>
                   </a>
                 </li>
               </ul>
