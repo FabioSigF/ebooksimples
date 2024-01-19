@@ -46,21 +46,48 @@ const Testemunhos = ({ setSelectedPage }: Props) => {
       className="bg-sobre bg-repeat bg-top-center bg-auto py-32 w-full"
     >
       <div className="w-5/6 m-auto">
-        <TitleSection
-          header="Reviews"
-          title="Show some quotes from your readers"
-        />
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <TitleSection
+            header="Reviews"
+            title="Show some quotes from your readers"
+          />
+        </motion.div>
         <div className=" w-full grid grid-cols-1 md:grid-cols-60-40 pt-20">
-          <img
+          <motion.img
             src={TestemunhosBg}
             alt="testemunhos"
             className="w-full rounded-2xl"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
           />
           <div className="relative py-16 flex flex-col gap-8 w-full items-end">
             {testemunhos.map((item, index) => (
-              <div
+              <motion.div
                 className="bg-white p-12 rounded-md shadow-xl md:w-[100% + 100px] md:-ml-[100px]"
                 key={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                  hidden: { opacity: 0, x: 50 },
+                  visible: { opacity: 1, x: 0 },
+                }}
               >
                 <p className="text-xl">{item.text}</p>
                 <div
@@ -78,7 +105,7 @@ const Testemunhos = ({ setSelectedPage }: Props) => {
                     <span className="text-sm">{item.author_job}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
             <div className="">
               <ActionButton>Free Ebook Download</ActionButton>

@@ -16,7 +16,16 @@ const Inicio = ({ setSelectedPage }: Props) => {
       onViewportEnter={() => setSelectedPage(SelectedPage.Inicio)}
     >
       <div className="bg-transparent bg-gradient-hero opacity-100 absolute top-0 left-0 w-full h-full" />
-      <div className="w-5/6 m-auto relative h-full pt-28 flex flex-col items-center gap-10">
+      <motion.div className="w-5/6 m-auto relative h-full pt-28 flex flex-col items-center gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+        variants={{
+          hidden: { opacity: 0, y: -50 },
+          visible: { opacity: 1, y: 0 },
+        }}
+       >
         <TitleSection
           header="Wordpress"
           title="Preview your ebook with a stunning theme"
@@ -30,7 +39,7 @@ const Inicio = ({ setSelectedPage }: Props) => {
             className="w-[65%] m-auto -mb-[100px] sm:-mb-[150px]"
           />
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

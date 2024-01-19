@@ -1,6 +1,6 @@
+import Counter from "@/components/Counter";
 import { SelectedPage } from "@/shared/types";
 import { motion } from "framer-motion";
-import React from "react";
 import { IconType } from "react-icons";
 import {
   FaFacebookSquare,
@@ -55,8 +55,10 @@ const Metricas = ({ setSelectedPage }: Props) => {
             className="flex flex-col gap-4 items-center justify-center text-white"
             key={index}
           >
-            <item.Icon  className="text-5xl"/>
-            <span className="text-2xl">{item.number}</span>
+            <item.Icon className="text-5xl" />
+            <div className="text-2xl">
+              <Counter direction="up" value={item.number} />
+            </div>
             <h6 className="text-xl font-bold text-white">{item.title}</h6>
           </div>
         ))}

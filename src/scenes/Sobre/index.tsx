@@ -38,11 +38,32 @@ const Sobre = ({ setSelectedPage }: Props) => {
       className="bg-sobre bg-no-repeat"
     >
       <div className="w-5/6 m-auto pt-64 relative pb-32">
-        <TitleSection
-          header="Wordpress"
-          title="Display the best features here"
-        />
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
+          <TitleSection
+            header="Wordpress"
+            title="Display the best features here"
+          />
+        </motion.div>
+        <motion.div
+          className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
+          }}
+        >
           {content.map((item, index) => (
             <CardSobre
               key={index}
@@ -51,7 +72,7 @@ const Sobre = ({ setSelectedPage }: Props) => {
               description={item.description}
             />
           ))}
-        </div>
+        </motion.div>
       </div>
     </motion.section>
   );
